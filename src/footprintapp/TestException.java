@@ -7,6 +7,8 @@
  * Th below is all stuff I need to know for using Netbeans IDE... Just notes...
 
  Ctrl-Space for code completion
+ 
+ Alt-Insert for getter and setter generating
 
  */
 package footprintapp;
