@@ -2,6 +2,12 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ *
+ *
+ * Th below is all stuff I need to know for using Netbeans IDE... Just notes...
+
+ Ctrl-Space for code completion
+
  */
 package footprintapp;
 
