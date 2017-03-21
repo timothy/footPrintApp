@@ -17,7 +17,7 @@ public class FootPrintApp {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        String s = "App just started!";
+        String s = "Trying to do version controll with netbeans...";
         System.out.print(s);
     }
 }
