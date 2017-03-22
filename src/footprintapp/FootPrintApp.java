@@ -28,7 +28,9 @@ public class FootPrintApp {
         array[2] = bicycle;
 
         for (CarbonFootprint i : array) {
-            System.out.println(i.getCarbonFootPrint());
+            System.out.println(i.getClass().getSimpleName());
+            System.out.println("Carbon Foot Print:"+i.getCarbonFootPrint());
+            System.out.print("\n");
         }
     }
 }
