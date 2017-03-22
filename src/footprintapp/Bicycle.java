@@ -27,7 +27,8 @@ public class Bicycle implements CarbonFootprint {
 
     @Override
     public double getCarbonFootPrint() {
-      return this.milesTraveledPerMonth * .9;
+        System.out.println("Miles Traveled Per Month:" + this.milesTraveledPerMonth);
+        return this.milesTraveledPerMonth * .9;
     }
 
 }

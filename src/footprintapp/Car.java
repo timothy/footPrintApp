@@ -9,7 +9,7 @@ package footprintapp;
  *
  * @author tim
  */
-public class Car implements CarbonFootprint{
+public class Car implements CarbonFootprint {
 
     private double milesDrivenPerYear;
     private double milesPerGallon;
@@ -37,6 +37,8 @@ public class Car implements CarbonFootprint{
 
     @Override
     public double getCarbonFootPrint() {
+        System.out.println("Miles Per Gallon:" + this.milesPerGallon);
+        System.out.println("Miles Driven Per Year:" + this.milesDrivenPerYear);
         return this.milesDrivenPerYear / this.milesPerGallon * 19.82;
     }
 

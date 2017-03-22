@@ -38,6 +38,8 @@ public class Building implements CarbonFootprint {
     // Building footprint = ([monthly gas bill / 10.68] * 119.58 * 12) + ([monthly electric bill / 0.1188] * 1232 * 12)
     @Override
     public double getCarbonFootPrint() {
+        System.out.println("Monthly Electric Bill:" + this.monthlyElectricBill);
+        System.out.println("Monthly Gas Bill:" + this.monthlyGasBill);
         return ((this.monthlyGasBill / 10.68) * 119.58 * 12) + (this.monthlyElectricBill / 0.1188) * 1232 * 12;
     }
 
