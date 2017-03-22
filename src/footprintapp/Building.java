@@ -9,7 +9,7 @@ package footprintapp;
  *
  * @author tim
  */
-public class Building {
+public class Building implements CarbonFootprint {
 
     private double monthlyElectricBill;
     private double monthlyGasBill;
@@ -33,6 +33,12 @@ public class Building {
 
     public void setMonthlyGasBill(double monthlyGasBill) {
         this.monthlyGasBill = monthlyGasBill;
+    }
+
+    // Building footprint = ([monthly gas bill / 10.68] * 119.58 * 12) + ([monthly electric bill / 0.1188] * 1232 * 12)
+    @Override
+    public double getCarbonFootPrint() {
+        return ((this.monthlyGasBill / 10.68) * 119.58 * 12) + (this.monthlyElectricBill / 0.1188) * 1232 * 12;
     }
 
 }

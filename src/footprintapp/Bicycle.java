@@ -9,7 +9,7 @@ package footprintapp;
  *
  * @author tim
  */
-public class Bicycle {
+public class Bicycle implements CarbonFootprint {
 
     private double milesTraveledPerMonth;
 
@@ -23,6 +23,11 @@ public class Bicycle {
 
     public void setMilesTraveledPerMonth(double milesTraveledPerMonth) {
         this.milesTraveledPerMonth = milesTraveledPerMonth;
+    }
+
+    @Override
+    public double getCarbonFootPrint() {
+      return this.milesTraveledPerMonth * .9;
     }
 
 }
