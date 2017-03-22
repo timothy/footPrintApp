@@ -14,27 +14,56 @@ public class Car implements CarbonFootprint {
     private double milesDrivenPerYear;
     private double milesPerGallon;
 
+    /**
+     * 
+     * @param milesDrivenPerYear
+     * @param milesPerGallon 
+     */
     Car(double milesDrivenPerYear, double milesPerGallon) {
-        this.milesDrivenPerYear = milesDrivenPerYear;
-        this.milesPerGallon = milesPerGallon;
+        if (milesDrivenPerYear >= 0 && milesPerGallon >= 0) {
+            this.milesDrivenPerYear = milesDrivenPerYear;
+            this.milesPerGallon = milesPerGallon;
+        } else {
+            throw new InvalidFootprintException();
+        }
     }
 
+    /**
+     * 
+     * @return 
+     */
     public double getMilesDrivenPerYear() {
         return milesDrivenPerYear;
     }
 
+    /**
+     * 
+     * @param milesDrivenPerYear 
+     */
     public void setMilesDrivenPerYear(double milesDrivenPerYear) {
         this.milesDrivenPerYear = milesDrivenPerYear;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public double getMilesPerGallon() {
         return milesPerGallon;
     }
 
+    /**
+     * 
+     * @param milesPerGallon 
+     */
     public void setMilesPerGallon(double milesPerGallon) {
         this.milesPerGallon = milesPerGallon;
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public double getCarbonFootPrint() {
         System.out.println("Miles Per Gallon:" + this.milesPerGallon);

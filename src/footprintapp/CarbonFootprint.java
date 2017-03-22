@@ -10,5 +10,9 @@ package footprintapp;
  * @author tim
  */
 public interface CarbonFootprint {
+    /**
+     * 
+     * @return 
+     */
     public double getCarbonFootPrint();
 }

@@ -13,22 +13,41 @@ public class Bicycle implements CarbonFootprint {
 
     private double milesTraveledPerMonth;
 
+    /**
+     * 
+     * @param milesTraveledPerMonth 
+     */
     public Bicycle(double milesTraveledPerMonth) {
-        this.milesTraveledPerMonth = milesTraveledPerMonth;
+        if (milesTraveledPerMonth >= 0) {
+            this.milesTraveledPerMonth = milesTraveledPerMonth;
+        } else {
+            throw new InvalidFootprintException();
+        }
     }
 
+    /**
+     * 
+     * @return 
+     */
     public double getMilesTraveledPerMonth() {
         return milesTraveledPerMonth;
     }
 
+    /**
+     * 
+     * @param milesTraveledPerMonth 
+     */
     public void setMilesTraveledPerMonth(double milesTraveledPerMonth) {
         this.milesTraveledPerMonth = milesTraveledPerMonth;
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public double getCarbonFootPrint() {
         System.out.println("Miles Traveled Per Month:" + this.milesTraveledPerMonth);
         return this.milesTraveledPerMonth * .9;
     }
-
 }
