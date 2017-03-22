@@ -16,8 +16,19 @@ public class FootPrintApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        String s = "Trying to do version controll with netbeans...";
-        System.out.print(s);
+
+        CarbonFootprint building = new Building(100, 100);
+        CarbonFootprint car = new Car(100, 100);
+        CarbonFootprint bicycle = new Bicycle(100);
+
+        CarbonFootprint[] array = new CarbonFootprint[3];
+
+        array[0] = building;
+        array[1] = car;
+        array[2] = bicycle;
+
+        for (CarbonFootprint i : array) {
+            System.out.println(i.getCarbonFootPrint());
+        }
     }
 }
