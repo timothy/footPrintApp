@@ -6,8 +6,10 @@
 package footprintapp;
 
 /**
+ * The Building class stores monthly electric and gas bills and uses them to
+ * generate a carbon footprint.
  *
- * @author tim
+ * @author Timothy Bradford
  */
 public class Building implements CarbonFootprint {
 
@@ -15,9 +17,10 @@ public class Building implements CarbonFootprint {
     private double monthlyGasBill;
 
     /**
-     * 
+     *
      * @param monthlyElectricBill
-     * @param monthlyGasBill 
+     * @param monthlyGasBill
+     * @throws InvalidFootprintException
      */
     public Building(double monthlyElectricBill, double monthlyGasBill) {
         if (monthlyElectricBill >= 0 && monthlyGasBill >= 0) {
@@ -28,41 +31,47 @@ public class Building implements CarbonFootprint {
         }
     }
 
-   /**
-    * 
-    * @return 
-    */
+    /**
+     * Gets the Monthly Electric Bill
+     *
+     * @return monthlyElectricBill
+     */
     public double getMonthlyElectricBill() {
         return monthlyElectricBill;
     }
 
     /**
-     * 
-     * @param monthlyElectricBill 
+     * sets Monthly Electric Bill
+     *
+     * @param monthlyElectricBill
      */
     public void setMonthlyElectricBill(double monthlyElectricBill) {
         this.monthlyElectricBill = monthlyElectricBill;
     }
 
     /**
-     * 
-     * @return 
+     * gets Monthly Gas Bill
+     *
+     * @return
      */
     public double getMonthlyGasBill() {
         return monthlyGasBill;
     }
 
     /**
-     * 
-     * @param monthlyGasBill 
+     * sets Monthly Gas Bill
+     *
+     * @param monthlyGasBill
      */
     public void setMonthlyGasBill(double monthlyGasBill) {
         this.monthlyGasBill = monthlyGasBill;
     }
 
     /**
-     * 
-     * @return 
+     * This uses the data from both monthly electric and gas bills to come up
+     * with a Carbon Footprint for the building
+     *
+     * @return A number that represents the Carbon Footprint of this building
      */
     @Override
     public double getCarbonFootPrint() {

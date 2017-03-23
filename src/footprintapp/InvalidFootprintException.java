@@ -6,38 +6,40 @@
 package footprintapp;
 
 /**
+ * Invalid Footprint Exception should be thrown any time an illegal argument is
+ * added for a class the implements CarbonFootprint
  *
- * @author tim
+ * @author Timothy Bradford
  */
 class InvalidFootprintException extends IllegalArgumentException {
 
     /**
-     * 
+     * default constructor
      */
     public InvalidFootprintException() {
         super("Invalid footprint was detected.");
     }
 
     /**
-     * 
-     * @param msg 
+     *
+     * @param msg a custom message to display when exception is thrown
      */
     public InvalidFootprintException(String msg) {
         super(msg);
     }
 
     /**
-     * 
-     * @param msg
-     * @param exception 
+     *
+     * @param msg a custom message to display when exception is thrown
+     * @param exception a custom Throwable exception
      */
     public InvalidFootprintException(String msg, Throwable exception) {
         super(msg, exception);
     }
 
     /**
-     * 
-     * @param exception 
+     *
+     * @param exception a custom Throwable exception
      */
     public InvalidFootprintException(Throwable exception) {
         super(exception);

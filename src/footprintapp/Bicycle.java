@@ -6,16 +6,19 @@
 package footprintapp;
 
 /**
+ * The Bicycle class stores miles Traveled Per Month and uses it to generate a
+ * carbon footprint.
  *
- * @author tim
+ * @author Timothy Bradford
  */
 public class Bicycle implements CarbonFootprint {
 
     private double milesTraveledPerMonth;
 
     /**
-     * 
-     * @param milesTraveledPerMonth 
+     *
+     * @param milesTraveledPerMonth
+     * @throws InvalidFootprintException
      */
     public Bicycle(double milesTraveledPerMonth) {
         if (milesTraveledPerMonth >= 0) {
@@ -26,24 +29,28 @@ public class Bicycle implements CarbonFootprint {
     }
 
     /**
-     * 
-     * @return 
+     * get the Miles Traveled Per Month
+     *
+     * @return this.milesTraveledPerMonth
      */
     public double getMilesTraveledPerMonth() {
-        return milesTraveledPerMonth;
+        return this.milesTraveledPerMonth;
     }
 
     /**
-     * 
-     * @param milesTraveledPerMonth 
+     * set the Miles Traveled Per Month
+     *
+     * @param milesTraveledPerMonth
      */
     public void setMilesTraveledPerMonth(double milesTraveledPerMonth) {
         this.milesTraveledPerMonth = milesTraveledPerMonth;
     }
 
     /**
-     * 
-     * @return 
+     * This uses the data from milesTraveledPerMonth come up with a Carbon
+     * Footprint for the Bicycle
+     *
+     * @return
      */
     @Override
     public double getCarbonFootPrint() {

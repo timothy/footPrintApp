@@ -6,8 +6,9 @@
 package footprintapp;
 
 /**
+ * Application logic for printing out different types of Carbon Footprints.
  *
- * @author tim
+ * @author Timothy Bradford
  */
 public class FootPrintApp {
 
@@ -22,7 +23,7 @@ public class FootPrintApp {
             CarbonFootprint car = new Car(100, -100);
             CarbonFootprint bicycle = new Bicycle(100);
             CarbonFootprint building = new Building(-10, 0);
-            
+
             array[0] = building;
             array[1] = car;
             array[2] = bicycle;
@@ -37,10 +38,9 @@ public class FootPrintApp {
             System.err.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.err.println(e.toString());
             System.err.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        } finally{
-        
+        } finally {
+            //Why does this happen before the catch?
         }
-        
 
     }
 }

@@ -6,8 +6,10 @@
 package footprintapp;
 
 /**
+ * The Car class stores miles Driven Per Year and miles Per Gallon then uses
+ * them to generate a carbon footprint.
  *
- * @author tim
+ * @author Timothy Bradford
  */
 public class Car implements CarbonFootprint {
 
@@ -15,9 +17,10 @@ public class Car implements CarbonFootprint {
     private double milesPerGallon;
 
     /**
-     * 
-     * @param milesDrivenPerYear
-     * @param milesPerGallon 
+     *
+     * @param milesDrivenPerYear the miles Driven Per Year for the car
+     * @param milesPerGallon the miles Per Gallon for the car
+     * @throws InvalidFootprintException
      */
     Car(double milesDrivenPerYear, double milesPerGallon) {
         if (milesDrivenPerYear >= 0 && milesPerGallon >= 0) {
@@ -29,40 +32,46 @@ public class Car implements CarbonFootprint {
     }
 
     /**
-     * 
-     * @return 
+     * get the Miles Driven Per Year
+     *
+     * @return this.milesDrivenPerYear
      */
     public double getMilesDrivenPerYear() {
-        return milesDrivenPerYear;
+        return this.milesDrivenPerYear;
     }
 
     /**
-     * 
-     * @param milesDrivenPerYear 
+     * set the Miles Driven Per Year
+     *
+     * @param milesDrivenPerYear
      */
     public void setMilesDrivenPerYear(double milesDrivenPerYear) {
         this.milesDrivenPerYear = milesDrivenPerYear;
     }
 
     /**
-     * 
-     * @return 
+     * get the Miles Per Gallon
+     *
+     * @return this.milesPerGallon
      */
     public double getMilesPerGallon() {
-        return milesPerGallon;
+        return this.milesPerGallon;
     }
 
     /**
-     * 
-     * @param milesPerGallon 
+     * set the Miles Per Gallon
+     *
+     * @param milesPerGallon
      */
     public void setMilesPerGallon(double milesPerGallon) {
         this.milesPerGallon = milesPerGallon;
     }
 
     /**
-     * 
-     * @return 
+     * This uses the data from both milesDrivenPerYear and milesPerGallon to
+     * come up with a Carbon Footprint for the car
+     *
+     * @return A number that represents the Carbon Footprint of this building
      */
     @Override
     public double getCarbonFootPrint() {

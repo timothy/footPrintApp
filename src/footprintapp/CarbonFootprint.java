@@ -6,13 +6,15 @@
 package footprintapp;
 
 /**
+ * All classes that implement this must return a carbon footprint
  *
- * @author tim
+ * @author Timothy Bradford
  */
 public interface CarbonFootprint {
+
     /**
-     * 
-     * @return 
+     *
+     * @return the carbon footprint of the object type
      */
     public double getCarbonFootPrint();
 }
