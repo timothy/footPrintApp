@@ -21,7 +21,7 @@ public class FootPrintApp {
 
         try {
             CarbonFootprint car = new Car(100, -100);
-            CarbonFootprint bicycle = new Bicycle(100);
+            CarbonFootprint bicycle = new Bicycle(-100);
             CarbonFootprint building = new Building(-10, 0);
 
             array[0] = building;

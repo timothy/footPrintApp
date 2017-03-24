@@ -50,7 +50,7 @@ public class Bicycle implements CarbonFootprint {
      * This uses the data from milesTraveledPerMonth come up with a Carbon
      * Footprint for the Bicycle
      *
-     * @return
+     * @return A number that represents the Carbon Footprint of this Bicycle
      */
     @Override
     public double getCarbonFootPrint() {

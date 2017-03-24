@@ -34,10 +34,10 @@ public class Building implements CarbonFootprint {
     /**
      * Gets the Monthly Electric Bill
      *
-     * @return monthlyElectricBill
+     * @return this.monthlyElectricBill
      */
     public double getMonthlyElectricBill() {
-        return monthlyElectricBill;
+        return this.monthlyElectricBill;
     }
 
     /**
@@ -52,10 +52,10 @@ public class Building implements CarbonFootprint {
     /**
      * gets Monthly Gas Bill
      *
-     * @return
+     * @return this.monthlyGasBill
      */
     public double getMonthlyGasBill() {
-        return monthlyGasBill;
+        return this.monthlyGasBill;
     }
 
     /**
